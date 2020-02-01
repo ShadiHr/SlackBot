@@ -32,7 +32,7 @@ public class DemoApplication {
             return "";
 
         } else if (text.toLowerCase().contains("bcs ta")) {
-            return "";
+            return "blah blah blah";
 
         } else if (text.toLowerCase().contains("joke")) {
             return "";
