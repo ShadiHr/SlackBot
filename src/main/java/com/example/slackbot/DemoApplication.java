@@ -14,7 +14,11 @@ public class DemoApplication {
     @RequestMapping
     @ResponseBody
     String home(@RequestParam String text) {
-        return "Hey Slackers!";
+        if (text.equals("TA")) {
+            return "Wednesdays 3-4 pm";
+        } else {
+            return "Hey Slackers!";
+        }
     }
 
 	public static void main(String[] args) {
