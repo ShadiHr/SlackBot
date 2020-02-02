@@ -18,7 +18,13 @@ public class DemoApplication {
     String home(@RequestParam String text) {
         String param = text.toLowerCase();
         if (param.contains("help")) {
-            return "...list all valid options... ";
+            return "=== For instructor office hours: ===\n"
+                    + "course number (e.g. 'cpsc 110' or 'cpsc210'\n" +
+                    "=== For BCS Program Director office hours: ===\n" +
+                    "'steve' OR 'wolfman' OR 'director'\n" +
+                    "=== For BCS tutor office hours: ===\n" +
+                    "'bcs ta'\n" +
+                    "Also let me know if you're 'bored' or want to hear a 'joke'";
         } else if (param.contains("cpsc 110") || param.contains ("cpsc110")) {
             return "Gregor Kiczales has office hours on Thursday from 1:00 PM to 3:00 PM in ICICS/CS 311.\n" +
                     "Norman Hutchinson has office hours on Wednesday from 8:00 AM to 9:00 AM in ICICS/CS 319.\n" +
@@ -42,12 +48,12 @@ public class DemoApplication {
             return "Sasha Avreline: Monday 5:00 PM - 6:00 PM in ICICS/X 330.\n" +
                     "Jordan Chiu: Tuesday 5:00 PM - 6:00 PM in ICICS/X 330.";
 
-        } else if (param.contains("joke")) {
+        } else if (param.contains("joke") || param.contains("bored")) {
             Jokes myJokes = new Jokes();
             return  myJokes.tellJoke();
 
         } else if (param.contains("steve") || param.contains("worlfman") || param.contains("director")) {
-            return "";
+            return "Steve Wolfman: Wednesday 1:00 PM - 3:00 PM in ICCS/X 330.";
 
         } else {
             return "Hi there! I would love to help but that request is invalid. \n" +

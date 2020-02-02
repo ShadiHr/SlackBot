@@ -22,14 +22,11 @@ public class Jokes {
     }
 
     public String tellJoke() {
-//        jokes.size();
+
         Random randomJoke = new Random();
         String random = jokes.get(new Random().nextInt(jokes.size()));
-//        Joke myJoke = new Joke();
-//        myJoke.setter(jokes.get(3));
-//
+
         return random;
 
-//        return myJoke.getter();
     }
 }
