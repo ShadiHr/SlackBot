@@ -16,7 +16,7 @@ public class DemoApplication {
     String home(@RequestParam String text) {
         if (text.toLowerCase().contains("help")) {
             return "...list all valid options... ";
-        } else if (text.toLowerCase().contains("cpsc 110" || "cpsc110")) {
+        } else if (text.toLowerCase().contains("cpsc 110")) {
             return "Gregor Kiczales has office hours on Thursday from 1:00 PM to 3:00 PM in ICICS/CS 311.\n" +
                     "Norman Hutchinson has office hours on Wednesday from 8:00 AM to 9:00 AM in ICICS/CS 319.\n" +
                     "Ola Oluwakemi has office hours on Tuesday  from 10:00 AM to 11:30 AM in ICICS/ CS 390.";
