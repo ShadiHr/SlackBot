@@ -19,12 +19,12 @@ public class DemoApplication {
         String param = text.toLowerCase();
         if (param.contains("help")) {
             return "=== For instructor office hours: ===\n"
-                    + "course number (e.g. 'cpsc 110' or 'cpsc210'\n" +
+                    + "course number (e.g. 'cpsc 110' or 'cpsc210')\n" +
                     "=== For BCS Program Director office hours: ===\n" +
                     "'steve' OR 'wolfman' OR 'director'\n" +
                     "=== For BCS tutor office hours: ===\n" +
                     "'bcs ta'\n" +
-                    "Also let me know if you're 'bored' or want to hear a 'joke'";
+                    "Also let me know if you're 'bored' or want to hear a 'joke' ;)";
         } else if (param.contains("cpsc 110") || param.contains ("cpsc110")) {
             return "Gregor Kiczales has office hours on Thursday from 1:00 PM to 3:00 PM in ICICS/CS 311.\n" +
                     "Norman Hutchinson has office hours on Wednesday from 8:00 AM to 9:00 AM in ICICS/CS 319.\n" +
@@ -57,7 +57,7 @@ public class DemoApplication {
 
         } else {
             return "Hi there! I would love to help but that request is invalid. \n" +
-                    "To see valid options type '/buddybot help'";
+                    "To see valid options type '/bcsbot help'";
         }
     }
 
