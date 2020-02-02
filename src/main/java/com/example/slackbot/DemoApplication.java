@@ -14,31 +14,37 @@ public class DemoApplication {
     @RequestMapping
     @ResponseBody
     String home(@RequestParam String text) {
-        if (text.toLowerCase().contains("help")) {
+        String param = text.toLowerCase();
+        if (param.contains("help")) {
             return "...list all valid options... ";
-        } else if (text.toLowerCase().contains("cpsc 110")) {
+        } else if (param.contains("cpsc 110") || param.contains ("cpsc110")) {
             return "Gregor Kiczales has office hours on Thursday from 1:00 PM to 3:00 PM in ICICS/CS 311.\n" +
                     "Norman Hutchinson has office hours on Wednesday from 8:00 AM to 9:00 AM in ICICS/CS 319.\n" +
                     "Ola Oluwakemi has office hours on Tuesday  from 10:00 AM to 11:30 AM in ICICS/ CS 390.";
 
-        } else if (text.toLowerCase().contains("cpsc 121")) {
+        } else if (param.contains("cpsc 121") || param.contains("cpsc121")) {
             return "Patrice Belleville has office hours on Tuesday  from 9:30 AM to 10:30 AM in ICICS/CS 343.\n" +
                     "Geoffrey Tien has office hours on Wednesday from 3:00 PM to 4:30 PM in ICICS/CS 245.\n";
 
-        } else if (text.toLowerCase().contains("cpsc 210")) {
-            return "";
+        } else if (param.contains("cpsc 210") || param.contains("210")) {
+            return "Paul Carter: Thursday 2:00 PM - 3:00 PM in ICICS/CS 391.\n" +
+                    "Giovanni Viviani: Monday 11:00 AM - 12:00 PM in ICICS/ CS 255.\n" +
+                    "Felix Grund: Wednesday 2:00 PM - 3:00 PM in ICICS/ CS 255.";
 
-        } else if (text.toLowerCase().contains("cpsc 221")) {
-            return "";
+        } else if (param.contains("cpsc 221") || param.contains("221")) {
+            return "Cinda Heeren: Monday 11:00 AM - 12:00 PM in ICICS/CS 390.\n" +
+                    "Andrew Roth: Monday  -  in ICICS/CS 233.\n" +
+                    "Geoffrey Tien: Friday  -  in ICICS/CS 300.";
 
-        } else if (text.toLowerCase().contains("bcs ta")) {
+        } else if (param.contains("bcs ta")) {
             return "blah blah blah";
 
-        } else if (text.toLowerCase().contains("joke")) {
+        } else if (param.contains("joke")) {
             return "";
 
         } else {
-            return "Hi there! I would love to help but that request is invalid. \nTo see valid options type '/buddybot help'";
+            return "Hi there! I would love to help but that request is invalid. \n" +
+                    "To see valid options type '/buddybot help'";
         }
     }
 
