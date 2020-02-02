@@ -43,9 +43,8 @@ public class DemoApplication {
                     "Jordan Chiu: Tuesday 5:00 PM - 6:00 PM in ICICS/X 330.";
 
         } else if (param.contains("joke")) {
-//            Jokes myJokes = new Jokes();
-//            return myJokes.tellJoke();
-            return "";
+            Jokes myJokes = new Jokes();
+            return  myJokes.tellJoke();
 
         } else if (param.contains("steve") || param.contains("worlfman") || param.contains("director")) {
             return "";

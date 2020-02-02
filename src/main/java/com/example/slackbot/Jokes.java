@@ -1,9 +1,10 @@
+package com.example.slackbot;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Jokes {
-    private static ArrayList<String> jokes;
+    private ArrayList<String> jokes;
 
     public Jokes() {
         jokes = new ArrayList<>(); //jokes
@@ -20,14 +21,15 @@ public class Jokes {
 
     }
 
-//    public void addJoke() {
-//        Jokes myJokes = new Jokes();
-//
-//    }
-
     public String tellJoke() {
+//        jokes.size();
         Random randomJoke = new Random();
         String random = jokes.get(new Random().nextInt(jokes.size()));
+//        Joke myJoke = new Joke();
+//        myJoke.setter(jokes.get(3));
+//
         return random;
+
+//        return myJoke.getter();
     }
 }
