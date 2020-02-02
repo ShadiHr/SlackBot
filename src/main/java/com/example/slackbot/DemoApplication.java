@@ -1,11 +1,13 @@
 package com.example.slackbot;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 
 @Controller
 @SpringBootApplication
@@ -37,9 +39,15 @@ public class DemoApplication {
                     "Geoffrey Tien: Friday  -  in ICICS/CS 300.";
 
         } else if (param.contains("bcs ta")) {
-            return "blah blah blah";
+            return "Sasha Avreline: Monday 5:00 PM - 6:00 PM in ICICS/X 330.\n" +
+                    "Jordan Chiu: Tuesday 5:00 PM - 6:00 PM in ICICS/X 330.";
 
         } else if (param.contains("joke")) {
+//            Jokes myJokes = new Jokes();
+//            return myJokes.tellJoke();
+            return "";
+
+        } else if (param.contains("steve") || param.contains("worlfman") || param.contains("director")) {
             return "";
 
         } else {
